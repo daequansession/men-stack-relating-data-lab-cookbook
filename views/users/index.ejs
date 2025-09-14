@@ -1,0 +1,21 @@
+<%- include('../partials/_navbar.ejs') %>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Community</title>
+  </head>
+  <body>
+    <h1>Community Page</h1>
+    <ul>
+      <% users.forEach(otherUser => { %>
+      <li>
+        <a href="/users/<%= otherUser._id %>" <%="otherUser.username" %>
+          Pantry
+        </a>
+      </li>
+      <% }) %>
+    </ul>
+  </body>
+</html>
